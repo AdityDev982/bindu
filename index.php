@@ -1,3 +1,3 @@
 <?php
-include 'logingit.php';
+include 'login.php';
 ?>
