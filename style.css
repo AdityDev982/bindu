@@ -1,0 +1,212 @@
+/* ---------------- Base Styles (common to all pages) ---------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 340px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Inputs */
+input, select {
+    margin: 10px 0;
+    padding: 12px;
+    width: 90%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0,123,255,0.4);
+    outline: none;
+}
+
+/* Button (Gradient style for all pages) */
+button {
+    margin-top: 12px;
+    padding: 12px;
+    width: 95%;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(45deg, #ff6a00, #ee0979); /* vibrant gradient */
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    background: linear-gradient(45deg, #ee0979, #ff6a00); /* hover gradient flip */
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Result text */
+p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------- Page Specific Backgrounds ---------------- */
+
+/* Login Page */
+body.login-page {
+    background: linear-gradient(135deg, #74ebd5, #9face6); /* purple-blue gradient */
+}
+
+/* Register Page */
+body.register-page {
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* teal-blue gradient */
+}
+
+/* Calculator Page */
+body.calculator-page {
+    background: linear-gradient(135deg, #f7971e, #ffd200); /* orange-yellow gradient */
+}
+/* Apply a fresh gradient background with animation */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+/* Background gradient animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container (login box) */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 320px;
+    animation: fadeIn 1s ease-in-out, float 3s ease-in-out infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating subtle animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Input styling */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.4);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+}
+
+/* Register link */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+p a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+p a:hover {
+    color: #6a11cb;
+    text-decoration: underline;
+}
